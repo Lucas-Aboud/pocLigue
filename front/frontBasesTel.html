@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+    <title>Sistema de Controle de Voos</title>
+</head>
+<body>
+    <div class="title">
+        <h2>Bases e Telefones</h2>
+    </div>
+    <!-- Cards com dados dos aeroportos -->
+    <div class="flight-cards">
+        <div class="bloco">    
+            <div class="flight-card">
+                <p>Bases: Viracopos</p>
+                <p>Telefone: <a href="tel:xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+                <button class="info-button">Mais Informações</button>
+            </div>
+
+            <div class="flight-card">
+                <p>Bases: Confins</p>
+                <p>Telefone: <a href="tel:xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+                <button class="info-button">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="bloco">    
+            <div class="flight-card">
+                <p>Bases: Viracopos</p>
+                <p>Telefone: <a href="tel:xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+                <button class="info-button">Mais Informações</button>
+            </div>
+
+            <div class="flight-card">
+                <p>Bases: Confins</p>
+                <p>Telefone: <a href="tel:xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+                <button class="info-button">Mais Informações</button>
+            </div>
+        </div> 
+        
+        <div class="bloco">    
+            <div class="flight-card">
+                <p>Bases: Viracopos</p>
+                <p>Telefone: <a href="tel:xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+                <button class="info-button">Mais Informações</button>
+            </div>
+
+            <div class="flight-card">
+                <p>Bases: Confins</p>
+                <p>Telefone: <a href="tel:xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+                <button class="info-button">Mais Informações</button>
+            </div>
+        </div>
+       
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <h3>Informações do Aeroporto</h3>
+            <p>Detalhes sobre o aeroporto aqui.</p>
+            <a href="#" class="popup-close" id="popupClose">Fechar</a>
+            <a href="tel:xxxx-xxxx" class="popup-phone">Ligar para o Aeroporto</a>
+        </div>
+    </div>
+
+    <!-- Script para manipulação do DOM -->
+    <script>
+        const infoButtons = document.querySelectorAll('.info-button');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupClose = document.getElementById('popupClose');
+
+        infoButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                popupOverlay.style.display = 'flex';
+            });
+        });
+
+        popupClose.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+<footer>
+    <div class="footer">
+        "Todos os direitos reservados pela equipe GHT"
+    </div>
+</footer>
+</html>
+
