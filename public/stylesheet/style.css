@@ -43,7 +43,7 @@ body {
 .bloco {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:first baseline;
     width: 100%;
 }
 
